@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "frank-cucumber/version"
 
 Gem::Specification.new do |s|
-  s.name        = "frank-cucumber"
+  s.name        = "sc-frank-cucumber"
   s.version     = Frank::Cucumber::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Pete Hodgson","Derek Longmuir"]
