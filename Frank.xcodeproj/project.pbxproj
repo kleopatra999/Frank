@@ -178,6 +178,10 @@
 		D6FA01B714283C4F00576AE3 /* FranklyProtocolHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = D6FA01B714283C4F00576AE2 /* FranklyProtocolHelper.h */; };
 		D6FA01B714283C4F00576AEF /* EnginesCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FA01B714283C4F00576AEE /* EnginesCommand.m */; };
 		D6FA01B714283C4F00576AF1 /* EnginesCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = D6FA01B714283C4F00576AF0 /* EnginesCommand.h */; };
+		F8032105E04958B88C3C0193 /* NotificationCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = F8032DCBF811C464D5767A12 /* NotificationCommand.m */; };
+		F803234F778621F7B94244BD /* NotificationCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = F80327AEEADC79F8BAEBD904 /* NotificationCommand.h */; };
+		F8032821CF1FB24188D9655A /* NotificationCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = F8032DCBF811C464D5767A12 /* NotificationCommand.m */; };
+		F8032DD0C3888247E8F01A35 /* NotificationCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = F80327AEEADC79F8BAEBD904 /* NotificationCommand.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -440,6 +444,8 @@
 		D6FA01B714283C4F00576AE2 /* FranklyProtocolHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FranklyProtocolHelper.h; sourceTree = "<group>"; };
 		D6FA01B714283C4F00576AEE /* EnginesCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnginesCommand.m; sourceTree = "<group>"; };
 		D6FA01B714283C4F00576AF0 /* EnginesCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnginesCommand.h; sourceTree = "<group>"; };
+		F80327AEEADC79F8BAEBD904 /* NotificationCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationCommand.h; sourceTree = "<group>"; };
+		F8032DCBF811C464D5767A12 /* NotificationCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationCommand.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -717,6 +723,8 @@
 				C189EF1D16BB5A8000F8236D /* VersionCommand.m */,
 				30E82E3017128AB500E5BC7C /* ResolutionCommand.h */,
 				30E82E3117128AB500E5BC7C /* ResolutionCommand.m */,
+				F8032DCBF811C464D5767A12 /* NotificationCommand.m */,
+				F80327AEEADC79F8BAEBD904 /* NotificationCommand.h */,
 			);
 			name = Commands;
 			sourceTree = "<group>";
@@ -852,6 +860,7 @@
 				30198DFB17936DCD00F686A7 /* FEXTableCell.h in Headers */,
 				3034CD4B1794CCE000A3794F /* FEXTableRow.h in Headers */,
 				30A7271E17A0B7B8006E16CC /* NSScreen+Frank.h in Headers */,
+				F8032DD0C3888247E8F01A35 /* NotificationCommand.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,6 +905,7 @@
 				30E82E3217128AB500E5BC7C /* ResolutionCommand.h in Headers */,
 				0658EF1E17E52FBB000614E6 /* UIApplication+FrankAutomation.h in Headers */,
 				0626BFAE174300240020B33B /* DumpCommandRoute.h in Headers */,
+				F803234F778621F7B94244BD /* NotificationCommand.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1143,6 +1153,7 @@
 				30198DFC17936DCD00F686A7 /* FEXTableCell.m in Sources */,
 				3034CD4C1794CCE000A3794F /* FEXTableRow.m in Sources */,
 				30A7271F17A0B7B8006E16CC /* NSScreen+Frank.m in Sources */,
+				F8032105E04958B88C3C0193 /* NotificationCommand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1274,6 +1285,7 @@
 				387BFA7D17036DDA007B9F17 /* UISlider+PublicAutomation.m in Sources */,
 				0626BFAF174300240020B33B /* DumpCommandRoute.m in Sources */,
 				3078E33C175417AE0016889C /* NSObject+FrankAutomation.m in Sources */,
+				F8032821CF1FB24188D9655A /* NotificationCommand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

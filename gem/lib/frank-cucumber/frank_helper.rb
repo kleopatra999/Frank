@@ -314,6 +314,19 @@ module FrankHelper
     return Gateway.evaluate_frankly_response( res, "frankly_map #{selector} #{method_name}" )
   end
 
+  # Ask Frank to begin observing notifications of the name given.
+  #
+  # @return [Array] an array with an element for each view matched by the selector, each element in the array gives the return value from invoking the specified method on that view.
+  def frankly_register_notification( notification_name )
+    res = frank_server.send_post(
+      'notification',
+      :operation => 'register',
+      :name => notification_name
+    )
+
+    return Gateway.evaluate_frankly_response( res, "notification register #{notification_name}" )
+  end
+
   # print a JSON-formatted dump of the current view heirarchy to stdout
   def frankly_dump
     res = frank_server.send_get( 'dump' )
