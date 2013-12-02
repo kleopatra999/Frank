@@ -179,9 +179,13 @@
 		D6FA01B714283C4F00576AEF /* EnginesCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FA01B714283C4F00576AEE /* EnginesCommand.m */; };
 		D6FA01B714283C4F00576AF1 /* EnginesCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = D6FA01B714283C4F00576AF0 /* EnginesCommand.h */; };
 		F8032105E04958B88C3C0193 /* NotificationCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = F8032DCBF811C464D5767A12 /* NotificationCommand.m */; };
+		F8032303D4A2723BE2C63702 /* NotificationCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = F80324A47386FEF48849AC75 /* NotificationCollector.m */; };
 		F803234F778621F7B94244BD /* NotificationCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = F80327AEEADC79F8BAEBD904 /* NotificationCommand.h */; };
+		F80325E7313C72EB0A474AC7 /* NotificationCollector.h in Headers */ = {isa = PBXBuildFile; fileRef = F8032E3C8537F52F2FBAA6B9 /* NotificationCollector.h */; };
 		F8032821CF1FB24188D9655A /* NotificationCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = F8032DCBF811C464D5767A12 /* NotificationCommand.m */; };
+		F8032AED7B300A3211A782A3 /* NotificationCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = F80324A47386FEF48849AC75 /* NotificationCollector.m */; };
 		F8032DD0C3888247E8F01A35 /* NotificationCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = F80327AEEADC79F8BAEBD904 /* NotificationCommand.h */; };
+		F8032FD64D7FA868193B8AC7 /* NotificationCollector.h in Headers */ = {isa = PBXBuildFile; fileRef = F8032E3C8537F52F2FBAA6B9 /* NotificationCollector.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -300,10 +304,10 @@
 		00E864C4161D708B00E01209 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0626BFAC174300240020B33B /* DumpCommandRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DumpCommandRoute.h; sourceTree = "<group>"; };
 		0626BFAD174300240020B33B /* DumpCommandRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DumpCommandRoute.m; sourceTree = "<group>"; };
-		30198DF917936DCD00F686A7 /* FEXTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEXTableCell.h; sourceTree = "<group>"; };
-		30198DFA17936DCD00F686A7 /* FEXTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEXTableCell.m; sourceTree = "<group>"; };
 		0658EF1C17E52FBB000614E6 /* UIApplication+FrankAutomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+FrankAutomation.h"; sourceTree = "<group>"; };
 		0658EF1D17E52FBB000614E6 /* UIApplication+FrankAutomation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+FrankAutomation.m"; sourceTree = "<group>"; };
+		30198DF917936DCD00F686A7 /* FEXTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEXTableCell.h; sourceTree = "<group>"; };
+		30198DFA17936DCD00F686A7 /* FEXTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEXTableCell.m; sourceTree = "<group>"; };
 		30228E2916421C4400B1F9E7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		302B803F1646DE02000F9861 /* NSImage+Frank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Frank.h"; sourceTree = "<group>"; };
 		302B80401646DE02000F9861 /* NSImage+Frank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Frank.m"; sourceTree = "<group>"; };
@@ -444,8 +448,10 @@
 		D6FA01B714283C4F00576AE2 /* FranklyProtocolHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FranklyProtocolHelper.h; sourceTree = "<group>"; };
 		D6FA01B714283C4F00576AEE /* EnginesCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnginesCommand.m; sourceTree = "<group>"; };
 		D6FA01B714283C4F00576AF0 /* EnginesCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnginesCommand.h; sourceTree = "<group>"; };
+		F80324A47386FEF48849AC75 /* NotificationCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationCollector.m; sourceTree = "<group>"; };
 		F80327AEEADC79F8BAEBD904 /* NotificationCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationCommand.h; sourceTree = "<group>"; };
 		F8032DCBF811C464D5767A12 /* NotificationCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationCommand.m; sourceTree = "<group>"; };
+		F8032E3C8537F52F2FBAA6B9 /* NotificationCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationCollector.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -570,6 +576,7 @@
 				C9605E6F1606C42200170F88 /* Commands */,
 				C9605E701606C4BD00170F88 /* Routing */,
 				C9605E711606C52200170F88 /* Selectors */,
+				F8032116FC45075DD71E8F6B /* Notifications */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -842,6 +849,15 @@
 			path = cocoahttpserver;
 			sourceTree = "<group>";
 		};
+		F8032116FC45075DD71E8F6B /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				F80324A47386FEF48849AC75 /* NotificationCollector.m */,
+				F8032E3C8537F52F2FBAA6B9 /* NotificationCollector.h */,
+			);
+			name = Notifications;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -861,6 +877,7 @@
 				3034CD4B1794CCE000A3794F /* FEXTableRow.h in Headers */,
 				30A7271E17A0B7B8006E16CC /* NSScreen+Frank.h in Headers */,
 				F8032DD0C3888247E8F01A35 /* NotificationCommand.h in Headers */,
+				F8032FD64D7FA868193B8AC7 /* NotificationCollector.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -906,6 +923,7 @@
 				0658EF1E17E52FBB000614E6 /* UIApplication+FrankAutomation.h in Headers */,
 				0626BFAE174300240020B33B /* DumpCommandRoute.h in Headers */,
 				F803234F778621F7B94244BD /* NotificationCommand.h in Headers */,
+				F80325E7313C72EB0A474AC7 /* NotificationCollector.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1154,6 +1172,7 @@
 				3034CD4C1794CCE000A3794F /* FEXTableRow.m in Sources */,
 				30A7271F17A0B7B8006E16CC /* NSScreen+Frank.m in Sources */,
 				F8032105E04958B88C3C0193 /* NotificationCommand.m in Sources */,
+				F8032303D4A2723BE2C63702 /* NotificationCollector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1286,6 +1305,7 @@
 				0626BFAF174300240020B33B /* DumpCommandRoute.m in Sources */,
 				3078E33C175417AE0016889C /* NSObject+FrankAutomation.m in Sources */,
 				F8032821CF1FB24188D9655A /* NotificationCommand.m in Sources */,
+				F8032AED7B300A3211A782A3 /* NotificationCollector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
