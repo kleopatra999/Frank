@@ -1,5 +1,6 @@
 require File.expand_path( '../gem/lib/frank-cucumber/version', __FILE__ )
 PRODUCT_VERSION=Frank::Cucumber::VERSION
+CONFIGURATION = 'Debug'
 
 def discover_latest_sdk_for(platform)
   `xcodebuild -showsdks | grep -o "#{platform}.*$" | sort | tail -n 1`.chomp
@@ -9,16 +10,16 @@ def build_dir
   File.expand_path( '../build', __FILE__ )
 end
 
-def build_library(scheme, sdk)
+def build_library(scheme, sdk, configuration = CONFIGURATION)
   puts "building #{{scheme:scheme,sdk:sdk}}"
   preprocessor_flag = %Q|GCC_PREPROCESSOR_DEFINITIONS='$(inherited) SHELLEY_PRODUCT_VERSION=\"#{PRODUCT_VERSION}\" FRANK_PRODUCT_VERSION=\"#{PRODUCT_VERSION}\"'|
-  sh "xcodebuild -workspace Frank.xcworkspace -scheme #{scheme} -configuration Release -sdk #{sdk} BUILD_DIR=\"#{build_dir}\" #{preprocessor_flag} clean build"
+  sh "xcodebuild -workspace Frank.xcworkspace -scheme #{scheme} -configuration #{configuration} -sdk #{sdk} BUILD_DIR=\"#{build_dir}\" #{preprocessor_flag} clean build"
 end
 
 desc "Build the Mac library"
 task :build_mac_lib do
   build_library('FrankMac', discover_latest_sdk_for('macosx'))
-  sh "cp #{build_dir}/Release/*Mac.a dist"
+  sh "cp #{build_dir}/#{CONFIGURATION}/*Mac.a dist"
 end
 
 def build_ios_library(platform)
@@ -36,11 +37,11 @@ task :build_simulator_lib do
 end
 
 task :combine_libraries do
-  `lipo -create -output "dist/libFrank.a" "#{build_dir}/Release-iphoneos/libFrank.a" "#{build_dir}/Release-iphonesimulator/libFrank.a"`
-  `lipo -create -output "dist/libCocoaHTTPServer.a" "#{build_dir}/Release-iphoneos/libCocoaHTTPServer.a" "#{build_dir}/Release-iphonesimulator/libCocoaHTTPServer.a"`
-  `lipo -create -output "dist/libCocoaAsyncSocket.a" "#{build_dir}/Release-iphoneos/libCocoaAsyncSocket.a" "#{build_dir}/Release-iphonesimulator/libCocoaAsyncSocket.a"`
-  `lipo -create -output "dist/libCocoaLumberjack.a" "#{build_dir}/Release-iphoneos/libCocoaLumberjack.a" "#{build_dir}/Release-iphonesimulator/libCocoaLumberjack.a"`
-  `lipo -create -output "dist/libShelley.a" "#{build_dir}/Release-iphoneos/libShelley.a" "#{build_dir}/Release-iphonesimulator/libShelley.a"`
+  `lipo -create -output "dist/libFrank.a" "#{build_dir}/#{CONFIGURATION}-iphoneos/libFrank.a" "#{build_dir}/#{CONFIGURATION}-iphonesimulator/libFrank.a"`
+  `lipo -create -output "dist/libCocoaHTTPServer.a" "#{build_dir}/#{CONFIGURATION}-iphoneos/libCocoaHTTPServer.a" "#{build_dir}/#{CONFIGURATION}-iphonesimulator/libCocoaHTTPServer.a"`
+  `lipo -create -output "dist/libCocoaAsyncSocket.a" "#{build_dir}/#{CONFIGURATION}-iphoneos/libCocoaAsyncSocket.a" "#{build_dir}/#{CONFIGURATION}-iphonesimulator/libCocoaAsyncSocket.a"`
+  `lipo -create -output "dist/libCocoaLumberjack.a" "#{build_dir}/#{CONFIGURATION}-iphoneos/libCocoaLumberjack.a" "#{build_dir}/#{CONFIGURATION}-iphonesimulator/libCocoaLumberjack.a"`
+  `lipo -create -output "dist/libShelley.a" "#{build_dir}/#{CONFIGURATION}-iphoneos/libShelley.a" "#{build_dir}/#{CONFIGURATION}-iphonesimulator/libShelley.a"`
 end
 
 desc "Build a univeral library for both iphone and iphone simulator"
