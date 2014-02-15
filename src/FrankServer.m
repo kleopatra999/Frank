@@ -97,7 +97,12 @@ static NSUInteger __defaultPort = FRANK_SERVER_PORT;
 		[_httpServer setName:@"Frank UISpec server"];
 		[_httpServer setType:@"_http._tcp."];
 		[_httpServer setConnectionClass:[RoutingHTTPConnection class]];
-		[_httpServer setPort:__defaultPort];
+
+		NSInteger frankHttpPort = [[NSUserDefaults standardUserDefaults] integerForKey:@"frankHttpPort"];
+		if (frankHttpPort <= 0) {
+		    frankHttpPort = __defaultPort;
+		}
+		[_httpServer setPort:frankHttpPort];
 		NSLog( @"Creating the server: %@", _httpServer );
 	}
 	return self;
