@@ -24,24 +24,19 @@ BOOL frankLogEnabled = NO;
 @implementation FrankLoader
 
 + (void)applicationDidBecomeActive:(NSNotification *)notification{
-#if TARGET_OS_IPHONE
-    FrankServer *server = [[FrankServer alloc] initWithDefaultBundle];
-    [server startServer];
-    
-#else
     static dispatch_once_t frankDidBecomeActiveToken;
-    
+
     dispatch_once(&frankDidBecomeActiveToken, ^{
         FrankServer *server = [[FrankServer alloc] initWithDefaultBundle];
         [server startServer];
-        
+#if !TARGET_OS_IPHONE
         [[NSApplication sharedApplication] FEX_startTrackingMenus];
-        
+
         [[NSNotificationCenter defaultCenter] removeObserver: [self class]
                                                         name: NSApplicationDidUpdateNotification
                                                       object: nil];
-    });
 #endif
+    });
 }
 
 + (void)load{
