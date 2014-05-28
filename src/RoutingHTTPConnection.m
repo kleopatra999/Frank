@@ -79,6 +79,7 @@
  **/
 - (NSObject<HTTPResponse> *)httpResponseForMethod:(NSString *)method URI:(NSString *)path
 {
+	NSLog(@"[FRANK] httpResponseMethod:%@ URI:%@", method, path);
 	NSObject<HTTPResponse> *response = [self.router handleRequestForPath:path withConnection:self];
 	
 	requestContentLength = 0;
