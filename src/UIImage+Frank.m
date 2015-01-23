@@ -17,16 +17,16 @@
 + (UIImage *)imageFromApplication:(BOOL)allWindows resultInPortrait:(BOOL)resultInPortrait {
     UIApplication *application = [UIApplication sharedApplication];
     NSArray* windows = (allWindows) ? [application FEX_windows] : [NSArray arrayWithObject:application.keyWindow];
-
+    
     UIInterfaceOrientation currentOrientation = application.statusBarOrientation;
-
+    
     CGFloat scale = [UIScreen mainScreen].scale;
     CGSize size = [UIScreen mainScreen].bounds.size;
-
+    
     if (!resultInPortrait && UIInterfaceOrientationIsLandscape(currentOrientation)) {
         size = CGSizeMake(size.height, size.width);
     }
-
+    
     UIGraphicsBeginImageContextWithOptions(size, NO, scale);
     CGContextRef context = UIGraphicsGetCurrentContext();
 
@@ -47,7 +47,7 @@
             CGContextTranslateCTM(context, -size.width / 2.0f, -size.height / 2.0f);
         }
     }
-
+        
     for (UIView *window in windows) {
         CGContextSaveGState(context);
         CGContextTranslateCTM(context, window.center.x, window.center.y);
@@ -55,21 +55,21 @@
         CGContextTranslateCTM(context,
                               - window.bounds.size.width * window.layer.anchorPoint.x,
                               - window.bounds.size.height * window.layer.anchorPoint.y);
-
-        [window.layer.modelLayer renderInContext:UIGraphicsGetCurrentContext()];
-
+        
+        [window.layer.presentationLayer renderInContext:UIGraphicsGetCurrentContext()];
+        
         CGContextRestoreGState(context);
     }
-
+    
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-
+    
     return image;
 }
 
 - (UIImage *)imageCropedToFrame:(CGRect)cropFrame {
     CGImageRef imageRef = CGImageCreateWithImageInRect([self CGImage], cropFrame);
-    UIImage *result = [UIImage imageWithCGImage:imageRef];
+    UIImage *result = [UIImage imageWithCGImage:imageRef]; 
     CGImageRelease(imageRef);
     return result;
 }
@@ -78,13 +78,13 @@
     CGRect imageFrame = CGRectMake(0, 0, self.size.width, self.size.height);
     UIGraphicsBeginImageContextWithOptions(self.size, NO, self.scale);
     [self drawInRect:imageFrame];
-
+    
     [[UIColor blackColor] set];
     UIRectFill(maskFrame);
-
+    
     UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-
+    
     return result;
 }
 
