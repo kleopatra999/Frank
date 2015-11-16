@@ -144,8 +144,6 @@ module Frank
           )
         end
       else
-        fix_frankified_apps_bundle_identifier
-
         in_root do
           FileUtils.cp_r(
             File.join( 'Frank',static_bundle),
@@ -202,7 +200,7 @@ module Frank
     end
 
     desc 'console', "launch a ruby console connected to your Frankified app"
-    method_option :bonjour, :type => :boolean, :default => false, :aliases => :b, :desc => "find Frank via Bonjour." 
+    method_option :bonjour, :type => :boolean, :default => false, :aliases => :b, :desc => "find Frank via Bonjour."
     method_option :server, :type => :string, :default => false, :aliases => :s, :desc => "server URL for Frank."
     def console
       # TODO: check whether app is running (using ps or similar), and launch it if it's not
@@ -261,21 +259,6 @@ module Frank
 
     def built_product_is_mac_app ( app_dir )
         return File.exists? File.join( app_dir, "Contents", "MacOS" )
-    end
-
-    def fix_frankified_apps_bundle_identifier
-      # as of iOS 6 the iOS Simulator locks up with a black screen if you try and launch an app which has the same
-      # bundle identifier as a previously installed app but which is in fact a different app. This impacts us because our
-      # Frankified app is different but has the same bundle identifier as the standard non-Frankified app which most users
-      # will want to have installed in the simulator as well.
-      #
-      # We work around this by modifying the Frankified app's bundle identifier inside its Info.plist.
-      inside frankified_app_dir do
-        existing_bundle_identifier = `/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' Info.plist`.chomp
-        new_bundle_identifier = existing_bundle_identifier + '.frankified'
-        run %Q|/usr/libexec/PlistBuddy -c 'Set :CFBundleIdentifier #{new_bundle_identifier}' Info.plist|
-        run %Q|/usr/libexec/PlistBuddy -c 'Set :CFBundleDisplayName Frankified' Info.plist|
-      end
     end
 
     def each_plugin_path(&block)
