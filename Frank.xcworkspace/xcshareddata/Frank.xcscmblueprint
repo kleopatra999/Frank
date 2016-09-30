@@ -1,0 +1,51 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "47038493EFFD566FF186978526F7C60AD4D66A6B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "FAB8483FEEECBA625848D62660B29CD0B3DEDEF7" : 9223372036854775807,
+    "71CFC0DE1DEFC877B0C5B9F98B971EBA2921D608" : 9223372036854775807,
+    "34FBC15DC880769329572FA358EB5B2D790E7E06" : 9223372036854775807,
+    "E2E5C00948AC86C71B322B5009334BBDE0052DB1" : 9223372036854775807,
+    "47038493EFFD566FF186978526F7C60AD4D66A6B" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7A1B6057-D264-407F-8F16-E8AB438D6524",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "FAB8483FEEECBA625848D62660B29CD0B3DEDEF7" : "Frank\/lib\/Shelley\/",
+    "71CFC0DE1DEFC877B0C5B9F98B971EBA2921D608" : "Frank\/lib\/cocoahttpserver\/",
+    "34FBC15DC880769329572FA358EB5B2D790E7E06" : "Frank\/lib\/AnyJSON\/",
+    "E2E5C00948AC86C71B322B5009334BBDE0052DB1" : "Frank\/lib\/PublicAutomation\/",
+    "47038493EFFD566FF186978526F7C60AD4D66A6B" : "Frank\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Frank",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Frank.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mattt\/AnyJSON.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "34FBC15DC880769329572FA358EB5B2D790E7E06"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/soundcloud\/Frank.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "47038493EFFD566FF186978526F7C60AD4D66A6B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/soundcloud\/CocoaHTTPServer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "71CFC0DE1DEFC877B0C5B9F98B971EBA2921D608"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TestingWithFrank\/PublicAutomation.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E2E5C00948AC86C71B322B5009334BBDE0052DB1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/soundcloud\/Shelley.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FAB8483FEEECBA625848D62660B29CD0B3DEDEF7"
+    }
+  ]
+}
